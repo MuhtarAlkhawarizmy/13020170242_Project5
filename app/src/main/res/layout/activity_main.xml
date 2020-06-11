@@ -5,7 +5,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainActivity">
+    tools:context=".view.MainActivity">
 
     <androidx.viewpager2.widget.ViewPager2
         android:layout_above="@+id/bottomNavigation"
@@ -21,9 +21,9 @@
         app:mbn_backgroundBottomColor="@color/colorPrimary"
         app:mbn_circleColor="@color/colorPrimary"
         app:mbn_countBackgroundColor="#00FFFFFF"
-        app:mbn_countTextColor="@color/colorWhite"
+        app:mbn_countTextColor="#00FFFFFF"
         app:mbn_defaultIconColor="#F4F4F4"
         app:mbn_rippleColor="#2f424242"
         app:mbn_selectedIconColor="@color/colorWhite"
-        app:mbn_shadowColor="#1f212121" />
+        app:mbn_shadowColor="#1f212121"/>
 </RelativeLayout>

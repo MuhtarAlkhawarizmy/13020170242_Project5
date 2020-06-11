@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".login"
+    tools:context=".behind.login"
     android:orientation="vertical">
     <LinearLayout
         android:layout_width="match_parent"
@@ -30,6 +30,7 @@
                 android:textColor="@color/colorPrimary"
                 android:text="Malaqbi App"/>
         </LinearLayout>
+
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -45,6 +46,7 @@
                 android:layout_marginBottom="8dp"/>
         </LinearLayout>
     </LinearLayout>
+
     <LinearLayout
         android:background="@drawable/back1_kecil"
         android:layout_width="match_parent"
@@ -71,6 +73,7 @@
             android:layout_marginTop="15dp"
             android:layout_marginBottom="10dp"
             android:text="Masuk ke akun kamu dengan"/>
+
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -93,6 +96,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="40dp"/>
             </LinearLayout>
+
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -130,10 +134,9 @@
             android:layout_marginLeft="35dp"
             android:id="@+id/txtId2">
             <EditText
-                android:drawableStart="@drawable/img_id"
                 android:layout_marginLeft="10dp"
                 android:layout_marginRight="10dp"
-                android:hint="  User_id"
+                android:hint=" User_id"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"/>
         </com.google.android.material.textfield.TextInputLayout>
@@ -146,19 +149,18 @@
             android:layout_marginTop="10dp"
             app:passwordToggleEnabled="true"
             android:id="@+id/txtPass2">
-
             <EditText
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="10dp"
                 android:layout_marginRight="10dp"
-                android:drawableStart="@drawable/img_pass"
-                android:hint="  Password"
+                android:hint=" Password"
                 android:inputType="textPassword" />
         </com.google.android.material.textfield.TextInputLayout>
+
         <LinearLayout
             android:layout_marginTop="15dp"
-            android:layout_marginLeft="30dp"
+            android:layout_marginLeft="35dp"
             android:layout_marginRight="30dp"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -166,7 +168,7 @@
             android:gravity="center_vertical">
             <CheckBox
                 android:id="@+id/chcIngat"
-                android:layout_marginLeft="5dp"
+                android:layout_marginRight="15dp"
                 android:layout_gravity="left"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"/>
@@ -176,48 +178,69 @@
                 android:layout_height="wrap_content"
                 android:text="Ingat Saya"/>
         </LinearLayout>
-        <Button
-            android:id="@+id/btnMasuk2"
-            android:background="@drawable/btn_login_style"
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="10dp"
             android:layout_marginLeft="35dp"
             android:layout_marginRight="35dp"
-            android:layout_marginTop="30dp"
-            android:layout_marginBottom="10dp"
-            android:textSize="17sp"
-            android:textStyle="bold"
-            android:textColor="@color/colorWhite"
-            android:text="Masuk"
-            android:layout_width="match_parent"
-            android:layout_height="43dp"/>
-
+            android:layout_marginTop="15dp">
+            <Button
+                android:id="@+id/btnMasuk2"
+                android:background="@drawable/btn_login_style"
+                android:layout_alignParentBottom="true"
+                android:layout_marginBottom="15dp"
+                android:textSize="17sp"
+                android:textStyle="bold"
+                android:textColor="@color/colorWhite"
+                android:text="Masuk"
+                android:layout_width="match_parent"
+                android:layout_height="43dp"/>
+        </RelativeLayout>
     </LinearLayout>
+
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:layout_weight="3"
         android:gravity="center"
-        android:orientation="vertical">
-        <TextView
+        android:orientation="vertical"
+        android:layout_margin="20dp">
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:orientation="horizontal"
             android:gravity="center"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:textColor="@color/colorPrimary"
-            android:textSize="17dp"
             android:layout_marginTop="5dp"
-            android:layout_marginBottom="5dp"
-            android:text="Belum Punya akun?. Daftar Sekarang !."/>
-        <Button
-            android:id="@+id/btnDaftar2"
-            android:background="@drawable/btn_login1_style"
-            android:layout_marginLeft="35dp"
-            android:layout_marginRight="35dp"
-            android:layout_marginTop="5dp"
-            android:layout_marginBottom="10dp"
-            android:textSize="17sp"
-            android:textStyle="bold"
-            android:textColor="@color/colorPrimary"
-            android:text="Daftar"
-            android:layout_width="match_parent"
-            android:layout_height="43dp"/>
+            android:layout_marginBottom="5dp">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/colorPrimary"
+                android:textSize="17dp"
+                android:text="Belum Punya akun.? Buat"/>
+            <TextView
+                android:id="@+id/textDaftar2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/colorPrimary"
+                android:textSize="17dp"
+                android:textStyle="bold"
+                android:text=" disini !. "/>
+
+<!--            <Button-->
+<!--                android:id="@+id/btnDaftar2"-->
+<!--                android:background="@drawable/btn_login1_style"-->
+<!--                android:layout_marginLeft="35dp"-->
+<!--                android:layout_marginRight="35dp"-->
+<!--                android:layout_marginTop="5dp"-->
+<!--                android:layout_marginBottom="10dp"-->
+<!--                android:textSize="17sp"-->
+<!--                android:textStyle="bold"-->
+<!--                android:textColor="@color/colorPrimary"-->
+<!--                android:text="Daftar"-->
+<!--                android:layout_width="match_parent"-->
+<!--                android:layout_height="43dp"/>-->
+        </LinearLayout>
     </LinearLayout>
 </LinearLayout>

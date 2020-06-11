@@ -1,4 +1,4 @@
-package com.example.malaqbiapp;
+package com.example.malaqbiapp.view;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.fragment.app.Fragment;
@@ -9,6 +9,7 @@ import androidx.viewpager2.widget.ViewPager2;
 import android.os.Bundle;
 
 import com.etebarian.meowbottomnavigation.MeowBottomNavigation;
+import com.example.malaqbiapp.R;
 
 public class MainActivity extends AppCompatActivity {
     private final int NUM_PAGES = 3;
@@ -28,6 +29,8 @@ public class MainActivity extends AppCompatActivity {
         page.setCurrentItem(0);
         page.setUserInputEnabled(false);
         BtmNav.show(1,true);
+
+//        page.setUserInputEnabled(true);
 
         BtmNav.add(new MeowBottomNavigation.Model(1, R.drawable.img_home));
         BtmNav.add(new MeowBottomNavigation.Model(2, R.drawable.img_daftar));
