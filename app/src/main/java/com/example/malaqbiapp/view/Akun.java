@@ -1,47 +1,54 @@
 package com.example.malaqbiapp.view;
 
+import android.content.Intent;
 import android.os.Bundle;
 
+import androidx.appcompat.widget.Toolbar;
 import androidx.fragment.app.Fragment;
 
 import android.view.LayoutInflater;
+import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
+import android.widget.Toast;
 
 import com.example.malaqbiapp.R;
+import com.example.malaqbiapp.behind.edit_akun;
+import com.example.malaqbiapp.behind.flipper;
 
 public class Akun extends Fragment {
-//    private static final String ARG_PARAM1 = "param1";
-//    private static final String ARG_PARAM2 = "param2";
-//
-//    private String mParam1;
-//    private String mParam2;
-//
-//    public Akun() {
-//
-//    }
-//public static Akun newInstance(String param1, String param2) {
-//        Akun fragment = new Akun();
-//        Bundle args = new Bundle();
-//        args.putString(ARG_PARAM1, param1);
-//        args.putString(ARG_PARAM2, param2);
-//        fragment.setArguments(args);
-//        return fragment;
-//    }
-
-//    @Override
-//    public void onCreate(Bundle savedInstanceState) {
-//        super.onCreate(savedInstanceState);
-//        if (getArguments() != null) {
-//            mParam1 = getArguments().getString(ARG_PARAM1);
-//            mParam2 = getArguments().getString(ARG_PARAM2);
-//        }
-//    }
-
+    private Button btn_edit;
+    private Toolbar toolbarEdit;
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
-        // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_akun, container, false);
+        View view=inflater.inflate(R.layout.fragment_akun, container, false);
+
+
+        toolbarEdit=view.findViewById(R.id.profileToolbar);
+        toolbarEdit.setOverflowIcon(getResources().getDrawable(R.drawable.ic_more_vert_white_24dp));
+        toolbarEdit.setOnMenuItemClickListener(new Toolbar.OnMenuItemClickListener() {
+            @Override
+            public boolean onMenuItemClick(MenuItem item) {
+                switch (item.getItemId()){
+                    case R.id.idChangePicture:
+                        startActivity(new Intent(getActivity(), edit_akun.class));
+                        break;
+                    case R.id.idChangeProfile:
+                        startActivity(new Intent(getActivity(), edit_akun.class));
+                        break;
+                    case R.id.idSignOut:
+                        startActivity(new Intent(getActivity(), flipper.class));
+                        break;
+                    default:
+                        Toast.makeText(getActivity(), "none", Toast.LENGTH_SHORT).show();
+                        break;
+                }
+                return true;
+            }
+        });
+
+        return view;
     }
 }

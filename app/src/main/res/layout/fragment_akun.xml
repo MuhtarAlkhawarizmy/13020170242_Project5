@@ -1,41 +1,52 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     tools:context=".view.Akun"
     android:orientation="vertical">
-    <LinearLayout
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/profileToolbar"
+        app:menu="@menu/menu_edit_akun"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:layout_weight="10"
-        android:layout_marginTop="5dp"
-        android:layout_marginBottom="5dp"
-        android:layout_marginLeft="20dp"
-        android:layout_marginRight="20dp">
-        <TextView
-            android:gravity="left"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:textColor="@color/colorPrimary"
-            android:textSize="25dp"
-            android:layout_marginTop="15dp"
-            android:layout_marginBottom="5dp"
-            android:text="Profile"
-            android:textStyle="bold"/>
-    </LinearLayout>
+        android:layout_height="wrap_content"/>
+<!--    <LinearLayout-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="match_parent"-->
+<!--        android:layout_weight="10"-->
+<!--        android:layout_marginTop="5dp"-->
+<!--        android:layout_marginBottom="5dp"-->
+<!--        android:layout_marginLeft="20dp"-->
+<!--        android:layout_marginRight="20dp">-->
+<!--        <TextView-->
+<!--            android:gravity="left"-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:textColor="@color/colorPrimary"-->
+<!--            android:textSize="25dp"-->
+<!--            android:layout_marginTop="15dp"-->
+<!--            android:layout_marginBottom="5dp"-->
+<!--            android:text="Profile"-->
+<!--            android:textStyle="bold"/>-->
+<!--    </LinearLayout>-->
+
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:layout_weight="1"
-        android:layout_marginTop="5dp"
+        android:layout_marginTop="20dp"
         android:layout_marginBottom="5dp"
         android:layout_marginLeft="5dp"
         android:layout_marginRight="5dp"
         android:orientation="vertical"
         android:gravity="center_horizontal">
-
+        <ImageView
+            android:layout_width="200dp"
+            android:layout_height="200dp"
+            android:layout_gravity="center"
+            android:layout_marginBottom="30dp"
+            android:src="@drawable/img_profil" />
         <ScrollView
             android:layout_width="match_parent"
             android:layout_height="match_parent">
@@ -43,103 +54,264 @@
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:layout_marginLeft="25dp"
-                android:layout_marginRight="25dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
                 android:gravity="center"
                 android:orientation="vertical">
 
-                <ImageView
-                    android:layout_width="200dp"
-                    android:layout_height="200dp"
-                    android:layout_gravity="center"
-                    android:src="@drawable/img_profil" />
-                <com.google.android.material.textfield.TextInputLayout
-                    android:id="@+id/txtId3"
+                <LinearLayout
+                    android:layout_marginTop="10dp"
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="10dp">
-                    <EditText
-                        android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal"
+                    android:gravity="center_vertical">
+                    <ImageView
+                        android:layout_marginLeft="8dp"
+                        android:src="@drawable/img_id"
+                        android:layout_width="40dp"
+                        android:layout_height="70dp"/>
+                    <TextView
+                        android:id="@+id/textId3"
+                        android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:drawableStart="@drawable/img_id"
-                        android:hint="  User_id" />
-                </com.google.android.material.textfield.TextInputLayout>
+                        android:text="Id_pengguna"
+                        android:textSize="18dp"
+                        android:layout_marginTop="4dp"
+                        android:layout_marginLeft="20dp"/>
+                </LinearLayout>
 
-                <com.google.android.material.textfield.TextInputLayout
-                    android:id="@+id/txtNama3"
+                <LinearLayout
+                    android:layout_marginTop="10dp"
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="10dp">
-                    <EditText
-                        android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal"
+                    android:gravity="center_vertical">
+                    <ImageView
+                        android:layout_marginLeft="8dp"
+                        android:src="@drawable/img_name"
+                        android:layout_width="40dp"
+                        android:layout_height="70dp"/>
+                    <TextView
+                        android:id="@+id/textNama3"
+                        android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:drawableStart="@drawable/img_name"
-                        android:hint="  Nama lengkap" />
-                </com.google.android.material.textfield.TextInputLayout>
+                        android:text="Nama Lengkap"
+                        android:textSize="18dp"
+                        android:layout_marginTop="4dp"
+                        android:layout_marginLeft="20dp"/>
+                </LinearLayout>
 
-                <com.google.android.material.textfield.TextInputLayout
-                    android:id="@+id/txtPass3"
+                <LinearLayout
+                    android:layout_marginTop="10dp"
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="10dp">
-                    <EditText
-                        android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal"
+                    android:gravity="center_vertical">
+                    <ImageView
+                        android:layout_marginLeft="8dp"
+                        android:src="@drawable/img_pass"
+                        android:layout_width="40dp"
+                        android:layout_height="70dp"/>
+                    <TextView
+                        android:id="@+id/textPass3"
+                        android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:drawableStart="@drawable/img_pass"
-                        android:hint="  password" />
-                </com.google.android.material.textfield.TextInputLayout>
+                        android:text="Password"
+                        android:textSize="18dp"
+                        android:layout_marginTop="4dp"
+                        android:layout_marginLeft="20dp"/>
+                </LinearLayout>
 
-                <com.google.android.material.textfield.TextInputLayout
-                    android:id="@+id/txtAlamat3"
+                <LinearLayout
+                    android:layout_marginTop="10dp"
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="10dp">
-                    <EditText
-                        android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal"
+                    android:gravity="center_vertical">
+                    <ImageView
+                        android:layout_marginLeft="8dp"
+                        android:src="@drawable/img_daftar"
+                        android:layout_width="40dp"
+                        android:layout_height="70dp"/>
+                    <TextView
+                        android:id="@+id/textAlamat3"
+                        android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:drawableStart="@drawable/img_daftar"
-                        android:hint="  Alamat" />
-                </com.google.android.material.textfield.TextInputLayout>
+                        android:text="Alamat"
+                        android:textSize="18dp"
+                        android:layout_marginTop="4dp"
+                        android:layout_marginLeft="20dp"/>
+                </LinearLayout>
 
-                <com.google.android.material.textfield.TextInputLayout
-                    android:id="@+id/txtTelp3"
+                <LinearLayout
+                    android:layout_marginTop="10dp"
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="10dp">
-                    <EditText
-                        android:inputType="phone"
-                        android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal"
+                    android:gravity="center_vertical">
+                    <ImageView
+                        android:layout_marginLeft="8dp"
+                        android:src="@drawable/img_phone"
+                        android:layout_width="40dp"
+                        android:layout_height="70dp"/>
+                    <TextView
+                        android:id="@+id/textTelp3"
+                        android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:drawableStart="@drawable/img_phone"
-                        android:hint="  No.Telp" />
-                </com.google.android.material.textfield.TextInputLayout>
+                        android:text="No. Telpon"
+                        android:textSize="18dp"
+                        android:layout_marginTop="4dp"
+                        android:layout_marginLeft="20dp"/>
+                </LinearLayout>
 
-                <com.google.android.material.textfield.TextInputLayout
-                    android:id="@+id/txtInfo3"
+
+                <LinearLayout
+                    android:layout_marginTop="10dp"
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="10dp">
-                    <EditText
-                        android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal"
+                    android:gravity="center_vertical">
+                    <ImageView
+                        android:layout_marginLeft="8dp"
+                        android:src="@drawable/img_note"
+                        android:layout_width="40dp"
+                        android:layout_height="70dp"/>
+                    <TextView
+                        android:id="@+id/textNote3"
+                        android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:drawableStart="@drawable/img_note"
-                        android:hint="  Info lainnya" />
-                </com.google.android.material.textfield.TextInputLayout>
+                        android:text="Informasi Tambahan"
+                        android:textSize="18dp"
+                        android:layout_marginTop="4dp"
+                        android:layout_marginLeft="20dp"/>
+                </LinearLayout>
 
-                <Button
-                    android:id="@+id/btnSimpan3"
-                    android:background="@drawable/btn_login_style"
-                    android:layout_marginLeft="35dp"
-                    android:layout_marginRight="35dp"
-                    android:layout_marginTop="30dp"
-                    android:layout_marginBottom="10dp"
-                    android:textSize="17sp"
-                    android:textStyle="bold"
-                    android:textColor="@color/colorWhite"
-                    android:text="Simpan"
-                    android:layout_width="match_parent"
-                    android:layout_height="43dp"/>
+<!--                <Button-->
+<!--                    android:id="@+id/btnEdit3"-->
+<!--                    android:background="@drawable/btn_login_style"-->
+<!--                    android:layout_marginLeft="35dp"-->
+<!--                    android:layout_marginRight="35dp"-->
+<!--                    android:layout_marginTop="30dp"-->
+<!--                    android:layout_marginBottom="20dp"-->
+<!--                    android:textSize="17sp"-->
+<!--                    android:textStyle="bold"-->
+<!--                    android:textColor="@color/colorWhite"-->
+<!--                    android:text="Edit Data"-->
+<!--                    android:layout_width="match_parent"-->
+<!--                    android:layout_height="43dp"/>-->
             </LinearLayout>
         </ScrollView>
     </LinearLayout>
+
+<!--    <LinearLayout-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="match_parent"-->
+<!--        android:layout_weight="1"-->
+<!--        android:layout_marginTop="5dp"-->
+<!--        android:layout_marginBottom="5dp"-->
+<!--        android:layout_marginLeft="5dp"-->
+<!--        android:layout_marginRight="5dp"-->
+<!--        android:orientation="vertical"-->
+<!--        android:gravity="center_horizontal">-->
+
+<!--        <ScrollView-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="match_parent">-->
+
+<!--            <LinearLayout-->
+<!--                android:layout_width="match_parent"-->
+<!--                android:layout_height="match_parent"-->
+<!--                android:layout_marginLeft="25dp"-->
+<!--                android:layout_marginRight="25dp"-->
+<!--                android:gravity="center"-->
+<!--                android:orientation="vertical">-->
+
+<!--                <ImageView-->
+<!--                    android:layout_width="200dp"-->
+<!--                    android:layout_height="200dp"-->
+<!--                    android:layout_gravity="center"-->
+<!--                    android:src="@drawable/img_profil" />-->
+<!--                <com.google.android.material.textfield.TextInputLayout-->
+<!--                    android:layout_width="match_parent"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    android:layout_marginTop="10dp">-->
+<!--                    <EditText-->
+<!--                        android:layout_width="match_parent"-->
+<!--                        android:layout_height="wrap_content"-->
+<!--                        android:drawableStart="@drawable/img_id"-->
+<!--                        android:hint="  User_id" />-->
+<!--                </com.google.android.material.textfield.TextInputLayout>-->
+
+<!--                <com.google.android.material.textfield.TextInputLayout-->
+<!--                    android:layout_width="match_parent"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    android:layout_marginTop="10dp">-->
+<!--                    <EditText-->
+<!--                        android:layout_width="match_parent"-->
+<!--                        android:layout_height="wrap_content"-->
+<!--                        android:drawableStart="@drawable/img_name"-->
+<!--                        android:hint="  Nama lengkap" />-->
+<!--                </com.google.android.material.textfield.TextInputLayout>-->
+
+<!--                <com.google.android.material.textfield.TextInputLayout-->
+<!--                    android:layout_width="match_parent"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    android:layout_marginTop="10dp">-->
+<!--                    <EditText-->
+<!--                        android:layout_width="match_parent"-->
+<!--                        android:layout_height="wrap_content"-->
+<!--                        android:drawableStart="@drawable/img_pass"-->
+<!--                        android:hint="  password" />-->
+<!--                </com.google.android.material.textfield.TextInputLayout>-->
+
+<!--                <com.google.android.material.textfield.TextInputLayout-->
+<!--                    android:layout_width="match_parent"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    android:layout_marginTop="10dp">-->
+<!--                    <EditText-->
+<!--                        android:layout_width="match_parent"-->
+<!--                        android:layout_height="wrap_content"-->
+<!--                        android:drawableStart="@drawable/img_daftar"-->
+<!--                        android:hint="  Alamat" />-->
+<!--                </com.google.android.material.textfield.TextInputLayout>-->
+
+<!--                <com.google.android.material.textfield.TextInputLayout-->
+<!--                    android:layout_width="match_parent"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    android:layout_marginTop="10dp">-->
+<!--                    <EditText-->
+<!--                        android:inputType="phone"-->
+<!--                        android:layout_width="match_parent"-->
+<!--                        android:layout_height="wrap_content"-->
+<!--                        android:drawableStart="@drawable/img_phone"-->
+<!--                        android:hint="  No.Telp" />-->
+<!--                </com.google.android.material.textfield.TextInputLayout>-->
+
+<!--                <com.google.android.material.textfield.TextInputLayout-->
+<!--                    android:layout_width="match_parent"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    android:layout_marginTop="10dp">-->
+<!--                    <EditText-->
+<!--                        android:layout_width="match_parent"-->
+<!--                        android:layout_height="wrap_content"-->
+<!--                        android:drawableStart="@drawable/img_note"-->
+<!--                        android:hint="  Info lainnya" />-->
+<!--                </com.google.android.material.textfield.TextInputLayout>-->
+
+<!--                <Button-->
+<!--                    android:background="@drawable/btn_login_style"-->
+<!--                    android:layout_marginLeft="35dp"-->
+<!--                    android:layout_marginRight="35dp"-->
+<!--                    android:layout_marginTop="30dp"-->
+<!--                    android:layout_marginBottom="10dp"-->
+<!--                    android:textSize="17sp"-->
+<!--                    android:textStyle="bold"-->
+<!--                    android:textColor="@color/colorWhite"-->
+<!--                    android:text="Simpan"-->
+<!--                    android:layout_width="match_parent"-->
+<!--                    android:layout_height="43dp"/>-->
+<!--            </LinearLayout>-->
+<!--        </ScrollView>-->
+<!--    </LinearLayout>-->
+
 </LinearLayout>

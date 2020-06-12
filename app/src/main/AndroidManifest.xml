@@ -9,7 +9,10 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".view.MainActivity"></activity>
+        <activity
+            android:name=".behind.edit_akun"
+            android:parentActivityName=".view.MainActivity"/>
+        <activity android:name=".view.MainActivity" />
         <activity android:name=".behind.login" />
         <activity android:name=".behind.daftar" />
         <activity android:name=".behind.flipper" />
