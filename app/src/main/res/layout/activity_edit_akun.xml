@@ -9,14 +9,17 @@
     android:orientation="vertical">
     <androidx.appcompat.widget.Toolbar
         android:id="@+id/toolbarEditAkun"
+        app:titleTextColor="@color/colorWhite"
+        android:background="?attr/colorPrimary"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"/>
+        android:layout_height="?attr/actionBarSize"
+        style="@style/Theme.AppCompat.Light.DarkActionBar"/>
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:layout_weight="1"
-        android:layout_marginTop="5dp"
+        android:layout_marginTop="15dp"
         android:layout_marginBottom="5dp"
         android:layout_marginLeft="5dp"
         android:layout_marginRight="5dp"
@@ -26,7 +29,7 @@
             android:layout_width="200dp"
             android:layout_height="200dp"
             android:layout_gravity="center"
-            android:src="@drawable/img_profil"
+            android:src="@drawable/foto_akun"
             android:layout_marginBottom="20dp"/>
 
         <ScrollView

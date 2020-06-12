@@ -6,36 +6,39 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     tools:context=".view.Akun"
     android:orientation="vertical">
-    <androidx.appcompat.widget.Toolbar
-        android:id="@+id/profileToolbar"
-        app:menu="@menu/menu_edit_akun"
+
+    <RelativeLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"/>
-<!--    <LinearLayout-->
-<!--        android:layout_width="match_parent"-->
-<!--        android:layout_height="match_parent"-->
-<!--        android:layout_weight="10"-->
-<!--        android:layout_marginTop="5dp"-->
-<!--        android:layout_marginBottom="5dp"-->
-<!--        android:layout_marginLeft="20dp"-->
-<!--        android:layout_marginRight="20dp">-->
-<!--        <TextView-->
-<!--            android:gravity="left"-->
-<!--            android:layout_width="match_parent"-->
-<!--            android:layout_height="wrap_content"-->
-<!--            android:textColor="@color/colorPrimary"-->
-<!--            android:textSize="25dp"-->
-<!--            android:layout_marginTop="15dp"-->
-<!--            android:layout_marginBottom="5dp"-->
-<!--            android:text="Profile"-->
-<!--            android:textStyle="bold"/>-->
-<!--    </LinearLayout>-->
+        android:layout_height="match_parent"
+        android:layout_weight="13"
+        android:layout_marginTop="5dp"
+        android:layout_marginBottom="5dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="0dp">
+        <TextView
+            android:layout_alignParentLeft="true"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/colorPrimary"
+            android:textSize="22sp"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="5dp"
+            android:text="Profile"
+            android:textStyle="bold"/>
+        <androidx.appcompat.widget.Toolbar
+            android:layout_alignParentRight="true"
+            android:id="@+id/profileToolbar"
+            app:menu="@menu/menu_edit_akun"
+            app:titleTextColor="@color/colorPrimary"
+            android:layout_width="wrap_content"
+            android:layout_height="?attr/actionBarSize"/>
+    </RelativeLayout>
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:layout_weight="1"
-        android:layout_marginTop="20dp"
+        android:layout_marginTop="10dp"
         android:layout_marginBottom="5dp"
         android:layout_marginLeft="5dp"
         android:layout_marginRight="5dp"
@@ -46,7 +49,7 @@
             android:layout_height="200dp"
             android:layout_gravity="center"
             android:layout_marginBottom="30dp"
-            android:src="@drawable/img_profil" />
+            android:src="@drawable/foto_akun" />
         <ScrollView
             android:layout_width="match_parent"
             android:layout_height="match_parent">

@@ -77,7 +77,9 @@
                 android:text="daftar"
                 android:textStyle="bold"
                 android:layout_width="match_parent"
-                android:layout_height="43dp"/>
+                android:layout_height="43dp"
+                android:clickable="true"
+                android:foreground="?android:attr/selectableItemBackground"/>
             <Button
                 android:id="@+id/btnGoLogin"
                 android:layout_alignParentBottom="true"
@@ -89,7 +91,9 @@
                 android:textColor="@color/colorPrimary"
                 android:text="Masuk"
                 android:layout_width="match_parent"
-                android:layout_height="43dp"/>
+                android:layout_height="43dp"
+                android:clickable="true"
+                android:foreground="?android:attr/selectableItemBackground"/>
         </RelativeLayout>
     </LinearLayout>
 </LinearLayout>

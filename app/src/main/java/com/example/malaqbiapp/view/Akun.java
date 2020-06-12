@@ -27,6 +27,7 @@ public class Akun extends Fragment {
 
 
         toolbarEdit=view.findViewById(R.id.profileToolbar);
+
         toolbarEdit.setOverflowIcon(getResources().getDrawable(R.drawable.ic_more_vert_white_24dp));
         toolbarEdit.setOnMenuItemClickListener(new Toolbar.OnMenuItemClickListener() {
             @Override
@@ -40,9 +41,6 @@ public class Akun extends Fragment {
                         break;
                     case R.id.idSignOut:
                         startActivity(new Intent(getActivity(), flipper.class));
-                        break;
-                    default:
-                        Toast.makeText(getActivity(), "none", Toast.LENGTH_SHORT).show();
                         break;
                 }
                 return true;

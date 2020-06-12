@@ -10,6 +10,9 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
         <activity
+            android:name=".desc_daerah"
+            android:parentActivityName=".view.MainActivity"/>
+        <activity
             android:name=".behind.edit_akun"
             android:parentActivityName=".view.MainActivity"/>
         <activity android:name=".view.MainActivity" />
