@@ -19,7 +19,23 @@ Nama Pasangkayu berasal dari kata “Vova dan Sanggayu”, menurut bahasa Kaili 
 
     <string name="decs_mateng">Kabupaten Mamuju Tengah adalah salah satu kabupaten di provinsi Sulawesi Barat, Indonesia. Ibukota kabupaten ini berada di Tobadak. Mamuju Tengah merupakan hasil pemekaran dari Kabupaten Mamuju yang disahkan dalam sidang paripurna DPR RI pada 14 Desember 2012 di gedung DPR RI tentang Rancangan UU Daerah Otonomi Baru (DOB) dengan dasar ukum UU No.4 tahun 2013.
 Secara umum, kawasan peruntukan pariwisata di Kabupaten Mamuju Tengah, terdiri atas; kawasan peruntukan wisata budaya, kawasan peruntukan wisata alam, kawasan peruntukan wisata bahari, kawasan peruntukan wisata agro, kawasan peruntukan wisata minat khusus dan kawasan peruntukan wisata buatan.</string>
-    
+
     <string name="desc_sandeq">Festival Sandeq Race adalah kegiatan rutin yang selalu digelar setiap tahun. Rutenya mengikuti laut dalam, di sepanjang Pantai Sulawesi Barat. Mulai dari Pantai Bahari di Polewali Mandar, hingga Pantai Manakarra di Mamuju.</string>
+
+
+    <string name="desc_tari1"> tarian tradisional yang berasal dari daerah Mamasa. Tarian ini merupakan tarian yang hanya dibawakan oleh para penari pria dengan berpakaian dan bersenjata layaknya para prajurit pada zaman dahulu yang bercerita tentang perang.</string>
+    <string name="desc_tari2"> Arti dari dua kata “Mappande Banua” adalah “Mappande” artinya “memberi makan”, dan “Banua” adalah “kampung”.</string>
+    <string name="desc_tari3"> Tarian ini pada umumnya dibawakan oleh para penari wanita dengan gerakannya yang lemah gemulai. Penari juga akan menggunakan kipas sebagai alat menarinya (properti).</string>
+    <string name="desc_tari4"> Konon, jenis tarian yang diilhami dari Salabose, Daeng Poralle yang merupakan Maraqdia (raja) pertama yang diangkat untuk memerintah kerajaan Banggae.</string>
+    <string name="desc_tari5"> Tarian ini biasanya dilakukan pada acara-acara pesta adat di Mamuju, dihadapan para tokoh adat dan penghulu. Pada pertunjukannya, para penari akan memakai pakaian adat Baju Badu yang merupakan khas provinsi Sulawesi Barat.</string>
+    <string name="desc_tari6"> tarian ini dilakukan oleh para penari pria sebagai para prajurit, sedangkan para penari wanita hanya sebagai pendukung tari.</string>
+    <string name="desc_tari7"> Kata ‘Saiyyang’ sendiri artinya ‘kuda’, dan kata ‘Pattuqdud’ artinya ‘penari’. Jika digabungkan dan diartikan sebagai umum, maka artinya ‘kuda yang menari’.</string>
+    <string name="desc_tari8"> Tarian ini merupakan tarian kreasi baru diangkat dari kisah cerita perang zaman dahulu, yaitu ketika dalam perang tersebut mengadu ketangkasan kekebalan terhadap senjata-senjata tajam dan yang keluar menjadi pemenang akan membawa ulu tau atau penggalan kepala musuh.</string>
+
+    <string name="desc_suku1"> Pada masa dulu di daerah Mandar berdiri beberapa buah kerajaan kecil, seperti Balanipa, Majene, Cenrana, Binuang dan Mamuju. Masing-masing diperintah oleh seorang raja yang disebut maradia yang didampingi oleh sebuah dewan adat yang disebut dewan hadat.</string>
+    <string name="desc_suku2"> Menurut cerita turun temurun yang tersimpan di kalangan suku Pattae bahwa nenek moyang orang Pattae pertama kali hidup di daerah Pattae adalah "To Millo' Ko", dan mereka menyebutnya sebagai "Mula Tau". Dari "Mula Tau" ini lah yang menurunkan orang-orang Pattae.</string>
+    <string name="desc_suku3"> Suku Pannei saat ini diperkirakan memiliki populasi sebesar 250.000 orang. Kehidupan masyarakat suku Pannei ini pula pada umumnya berprofesi sebagai petani.</string>
+    <string name="desc_suku4"> Keberadaan suku Pattinjo sendiri selama ini diakui sebagai orang Bugis atau hanya dianggap sebagai salah satu sub-suku Bugis. Sedangkan pemerintah setempat sering mengkategorikan orang Pattinjo sebagai suku Bugis Pattinjo.</string>
+
 
 </resources>
