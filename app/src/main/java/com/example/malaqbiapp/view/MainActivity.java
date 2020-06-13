@@ -6,10 +6,13 @@ import androidx.fragment.app.FragmentActivity;
 import androidx.viewpager2.adapter.FragmentStateAdapter;
 import androidx.viewpager2.widget.ViewPager2;
 
+import android.content.Intent;
 import android.os.Bundle;
+import android.view.View;
 
 import com.etebarian.meowbottomnavigation.MeowBottomNavigation;
 import com.example.malaqbiapp.R;
+import com.example.malaqbiapp.view2.MenuActivity;
 
 public class MainActivity extends AppCompatActivity {
     private final int NUM_PAGES = 3;
@@ -29,8 +32,6 @@ public class MainActivity extends AppCompatActivity {
         page.setCurrentItem(0);
         page.setUserInputEnabled(false);
         BtmNav.show(1,true);
-
-//        page.setUserInputEnabled(true);
 
         BtmNav.add(new MeowBottomNavigation.Model(1, R.drawable.img_home));
         BtmNav.add(new MeowBottomNavigation.Model(2, R.drawable.img_daftar));
@@ -95,5 +96,42 @@ public class MainActivity extends AppCompatActivity {
         public int getItemCount() {
             return NUM_PAGES;
         }
+    }
+
+    public void ClikBhs(View view){
+        Intent i=new Intent(this, MenuActivity.class);
+        i.putExtra("Menu", "Bhs");
+        startActivity(i);
+    }
+
+    public void ClikSuku(View view){
+        Intent i=new Intent(this, MenuActivity.class);
+        i.putExtra("Menu", "Suku");
+        startActivity(i);
+    }
+    public void ClikHand(View view){
+        Intent i=new Intent(this, MenuActivity.class);
+        i.putExtra("Menu", "Hand");
+        startActivity(i);
+    }
+    public void ClikBaju(View view){
+        Intent i=new Intent(this, MenuActivity.class);
+        i.putExtra("Menu", "Baju");
+        startActivity(i);
+    }
+    public void ClikSenjata(View view){
+        Intent i=new Intent(this, MenuActivity.class);
+        i.putExtra("Menu", "Senjata");
+        startActivity(i);
+    }
+    public void ClikMakan(View view){
+        Intent i=new Intent(this, MenuActivity.class);
+        i.putExtra("Menu", "Makan");
+        startActivity(i);
+    }
+    public void ClikTari(View view){
+        Intent i=new Intent(this, MenuActivity.class);
+        i.putExtra("Menu", "Tari");
+        startActivity(i);
     }
 }

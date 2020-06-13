@@ -1,11 +1,11 @@
 package com.example.malaqbiapp.model;
 
-public class SukuModel {
+public class MenuModel {
     private String Title;
     private int Descripsi;
     private int foto;
 
-    public SukuModel(String title, int descripsi, int foto) {
+    public MenuModel(String title, int descripsi, int foto) {
         Title = title;
         Descripsi = descripsi;
         this.foto = foto;

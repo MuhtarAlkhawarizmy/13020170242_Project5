@@ -77,6 +77,7 @@
                     android:layout_weight="1"
                     android:gravity="center">
                     <ImageView
+                        android:onClick="ClikTari"
                         android:id="@+id/imgTari"
                         android:src="@drawable/img_tari"
                         android:layout_width="match_parent"
@@ -148,6 +149,7 @@
                     android:layout_weight="1"
                     android:gravity="center">
                     <ImageView
+                        android:onClick="ClikHand"
                         android:id="@+id/imgHand"
                         android:src="@drawable/img_hand"
                         android:layout_width="match_parent"
@@ -205,6 +207,7 @@
                     android:layout_weight="1"
                     android:gravity="center">
                     <ImageView
+                        android:onClick="ClikBaju"
                         android:id="@+id/imgBaju"
                         android:src="@drawable/img_baju"
                         android:layout_width="match_parent"
@@ -228,6 +231,7 @@
                     android:layout_weight="1"
                     android:gravity="center">
                     <ImageView
+                        android:onClick="ClikSenjata"
                         android:id="@+id/imgSenjata"
                         android:src="@drawable/img_senjata"
                         android:layout_width="match_parent"
@@ -251,6 +255,7 @@
                     android:layout_weight="1"
                     android:gravity="center">
                     <ImageView
+                        android:onClick="ClikMakan"
                         android:id="@+id/imgMakan"
                         android:src="@drawable/img_makan"
                         android:layout_width="match_parent"
@@ -264,10 +269,9 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"/>
                 </LinearLayout>
-
             </LinearLayout>
-
         </LinearLayout>
+
         <LinearLayout
             android:layout_marginTop="5dp"
             android:layout_marginBottom="5dp"
@@ -282,30 +286,20 @@
                 android:text="Event : "
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"/>
-<!--            <HorizontalScrollView-->
-<!--                android:layout_width="match_parent"-->
-<!--                android:layout_height="match_parent">-->
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:orientation="horizontal"
-                    android:layout_marginTop="10dp"
-                    android:layout_marginBottom="10dp"
-                    android:layout_marginRight="10dp"
-                    android:layout_marginLeft="10dp">
+                    android:layout_marginTop="10dp">
                     <androidx.recyclerview.widget.RecyclerView
                         android:id="@+id/recyclerHome_Event"
                         android:orientation="horizontal"
                         tools:listitem="@layout/cardview_event"
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
-                        android:layout_marginLeft="10dp"
-                        android:layout_marginRight="10dp"
-                        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager" >
-
+                        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager">
                     </androidx.recyclerview.widget.RecyclerView>
                 </LinearLayout>
-<!--            </HorizontalScrollView>-->
         </LinearLayout>
         <LinearLayout
             android:layout_marginTop="5dp"

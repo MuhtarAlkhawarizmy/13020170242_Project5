@@ -12,15 +12,15 @@ import androidx.cardview.widget.CardView;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.example.malaqbiapp.R;
-import com.example.malaqbiapp.model.TarianModel;
+import com.example.malaqbiapp.model.sampelModel;
 
 import java.util.List;
 
-public class TariAdapter extends RecyclerView.Adapter<TariAdapter.MyViewHolder> {
+public class SampleAdapter extends RecyclerView.Adapter<SampleAdapter.MyViewHolder> {
     private Context mContext;
-    private List<TarianModel> mData;
+    private List<sampelModel> mData;
 
-    public TariAdapter(Context mContext, List<TarianModel> mData) {
+    public SampleAdapter(Context mContext, List<sampelModel> mData) {
         this.mContext = mContext;
         this.mData = mData;
     }
@@ -30,7 +30,7 @@ public class TariAdapter extends RecyclerView.Adapter<TariAdapter.MyViewHolder> 
     public MyViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
         View view;
         LayoutInflater miInflater=LayoutInflater.from(mContext);
-        view=miInflater.inflate(R.layout.cardview_tari, parent, false);
+        view=miInflater.inflate(R.layout.cardview_sample, parent, false);
         return new MyViewHolder(view);
     }
 

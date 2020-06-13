@@ -5,7 +5,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".view2.TariActivity"
+    tools:context=".view2.SampleActivity"
     android:orientation="vertical">
     <androidx.appcompat.widget.Toolbar
         android:id="@+id/toolbarTari"
@@ -26,7 +26,7 @@
         android:orientation="vertical">
         <androidx.recyclerview.widget.RecyclerView
             android:id="@+id/recyclerTari"
-            tools:listitem="@layout/cardview_tari"
+            tools:listitem="@layout/cardview_sample"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:layout_marginLeft="10dp"
