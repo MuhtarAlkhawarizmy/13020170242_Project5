@@ -9,12 +9,13 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
+        <activity android:name=".view.about"></activity>
         <activity
-            android:name=".desc_daerah"
-            android:parentActivityName=".view.MainActivity"/>
+            android:name=".view2.desc_daerah"
+            android:parentActivityName=".view.MainActivity" />
         <activity
-            android:name=".behind.edit_akun"
-            android:parentActivityName=".view.MainActivity"/>
+            android:name=".view2.edit_akun"
+            android:parentActivityName=".view.MainActivity" />
         <activity android:name=".view.MainActivity" />
         <activity android:name=".behind.login" />
         <activity android:name=".behind.daftar" />

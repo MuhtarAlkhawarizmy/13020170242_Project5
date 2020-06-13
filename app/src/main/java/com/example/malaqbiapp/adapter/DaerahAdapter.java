@@ -13,17 +13,17 @@ import androidx.cardview.widget.CardView;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.example.malaqbiapp.R;
-import com.example.malaqbiapp.desc_daerah;
-import com.example.malaqbiapp.model.Daerah_model;
+import com.example.malaqbiapp.view2.desc_daerah;
+import com.example.malaqbiapp.model.DaerahModel;
 
 import java.util.List;
 
-public class Adapter_daerah extends RecyclerView.Adapter<Adapter_daerah.MyViewHolder> {
+public class DaerahAdapter extends RecyclerView.Adapter<DaerahAdapter.MyViewHolder> {
 
     private Context mContext;
-    private List<Daerah_model> mData;
+    private List<DaerahModel> mData;
 
-    public Adapter_daerah(Context mContext, List<Daerah_model> mData) {
+    public DaerahAdapter(Context mContext, List<DaerahModel> mData) {
         this.mContext = mContext;
         this.mData = mData;
     }

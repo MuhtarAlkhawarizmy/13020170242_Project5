@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     tools:context=".view.Home"
     android:orientation="vertical">
     <LinearLayout
@@ -272,27 +272,30 @@
                 android:text="Event : "
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"/>
-            <HorizontalScrollView
-                android:layout_width="wrap_content"
-                android:layout_height="match_parent">
+<!--            <HorizontalScrollView-->
+<!--                android:layout_width="match_parent"-->
+<!--                android:layout_height="match_parent">-->
                 <LinearLayout
-                    android:layout_width="wrap_content"
+                    android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:orientation="horizontal"
                     android:layout_marginTop="10dp"
                     android:layout_marginBottom="10dp"
                     android:layout_marginRight="10dp"
                     android:layout_marginLeft="10dp">
-                    <ImageView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:src="@drawable/daerah1"/>
-                    <ImageView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:src="@drawable/daerah1"/>
+                    <androidx.recyclerview.widget.RecyclerView
+                        android:id="@+id/recyclerHome_Event"
+                        android:orientation="horizontal"
+                        tools:listitem="@layout/cardview_event"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginRight="10dp"
+                        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager" >
+
+                    </androidx.recyclerview.widget.RecyclerView>
                 </LinearLayout>
-            </HorizontalScrollView>
+<!--            </HorizontalScrollView>-->
         </LinearLayout>
         <LinearLayout
             android:layout_marginTop="5dp"

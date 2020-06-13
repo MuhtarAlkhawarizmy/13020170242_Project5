@@ -1,4 +1,4 @@
-package com.example.malaqbiapp.behind;
+package com.example.malaqbiapp.adapter;
 
 import android.content.Context;
 import android.view.LayoutInflater;

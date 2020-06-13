@@ -12,6 +12,7 @@ import android.widget.LinearLayout;
 import android.widget.TextView;
 
 import com.example.malaqbiapp.R;
+import com.example.malaqbiapp.adapter.SlideAdapter;
 
 public class flipper extends AppCompatActivity {
     private Button btn_Daftar, btn_Login;

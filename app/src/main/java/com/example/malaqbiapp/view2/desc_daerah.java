@@ -1,12 +1,15 @@
-package com.example.malaqbiapp;
+package com.example.malaqbiapp.view2;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.view.View;
 import android.widget.ImageView;
 import android.widget.TextView;
+
+import com.example.malaqbiapp.R;
 
 public class desc_daerah extends AppCompatActivity {
     private Toolbar toolbarDescDaerah;
@@ -20,7 +23,13 @@ public class desc_daerah extends AppCompatActivity {
         toolbarDescDaerah=findViewById(R.id.toolbar_DescDaerah);
         toolbarDescDaerah.setTitle("Detail Daerah");
         setSupportActionBar(toolbarDescDaerah);
-        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+        toolbarDescDaerah.setNavigationIcon(R.drawable.btn_back);
+        toolbarDescDaerah.setNavigationOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                finish();
+            }
+        });
 
         tvTitle=findViewById(R.id.txtTitleDaerah);
         tvKode=findViewById(R.id.txtCatDaerah);

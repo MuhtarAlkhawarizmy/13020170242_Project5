@@ -16,6 +16,10 @@
                 android:title="Edit Profile"
                 app:showAsAction="never"/>
             <item
+                android:id="@+id/idAbout"
+                android:title="About Us"
+                app:showAsAction="never"/>
+            <item
                 android:id="@+id/idSignOut"
                 android:title="Sign Out"
                 app:showAsAction="never"/>

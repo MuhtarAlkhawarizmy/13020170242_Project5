@@ -4,6 +4,7 @@ import android.os.Bundle;
 
 import androidx.fragment.app.Fragment;
 import androidx.recyclerview.widget.GridLayoutManager;
+import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 import android.view.LayoutInflater;
@@ -11,14 +12,18 @@ import android.view.View;
 import android.view.ViewGroup;
 
 import com.example.malaqbiapp.R;
-import com.example.malaqbiapp.adapter.Adapter_daerah;
-import com.example.malaqbiapp.model.Daerah_model;
+import com.example.malaqbiapp.adapter.DaerahAdapter;
+import com.example.malaqbiapp.adapter.EventAdapter;
+import com.example.malaqbiapp.model.DaerahModel;
+import com.example.malaqbiapp.model.EventModel;
 
 import java.util.ArrayList;
 import java.util.List;
 
 public class Home extends Fragment {
-    List<Daerah_model> lsHomeDaerah;
+    List<DaerahModel> lsHomeDaerah;
+    List<EventModel> lsHomeEvent;
+
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
@@ -26,17 +31,31 @@ public class Home extends Fragment {
         View view=inflater.inflate(R.layout.fragment_home, container, false);
 
         lsHomeDaerah=new ArrayList<>();
-        lsHomeDaerah.add(new Daerah_model("Polewali Mandar", R.string.decs_polman,"Kode Wilayah : 76.04", R.drawable.polman));
-        lsHomeDaerah.add(new Daerah_model("Mamasa", R.string.decs_mamasa,"Kode Wilayah : 76.03", R.drawable.mamasa));
-        lsHomeDaerah.add(new Daerah_model("Majene", R.string.decs_majene, "Kode Wilayah : 76.05", R.drawable.majene));
-        lsHomeDaerah.add(new Daerah_model("Mamuju", R.string.decs_mamuju,"Kode Wilayah : 76.02" , R.drawable.mamuju));
-        lsHomeDaerah.add(new Daerah_model("Mamuju Utara", R.string.decs_mamut,"Kode Wilayah : 76.01" ,R.drawable.mamut));
-        lsHomeDaerah.add(new Daerah_model("Mamuju Tengah", R.string.decs_mateng,"Kode Wilayah : 76.06" ,R.drawable.mateng));
+        lsHomeDaerah.add(new DaerahModel("Polewali Mandar", R.string.decs_polman,"Kode Wilayah : 76.04", R.drawable.polman));
+        lsHomeDaerah.add(new DaerahModel("Mamasa", R.string.decs_mamasa,"Kode Wilayah : 76.03", R.drawable.mamasa));
+        lsHomeDaerah.add(new DaerahModel("Majene", R.string.decs_majene, "Kode Wilayah : 76.05", R.drawable.majene));
+        lsHomeDaerah.add(new DaerahModel("Mamuju", R.string.decs_mamuju,"Kode Wilayah : 76.02" , R.drawable.mamuju));
+        lsHomeDaerah.add(new DaerahModel("Mamuju Utara", R.string.decs_mamut,"Kode Wilayah : 76.01" ,R.drawable.mamut));
+        lsHomeDaerah.add(new DaerahModel("Mamuju Tengah", R.string.decs_mateng,"Kode Wilayah : 76.06" ,R.drawable.mateng));
 
         RecyclerView myrv2=(RecyclerView) view.findViewById(R.id.recyclerHome_Daerah);
-        Adapter_daerah myAdapter2=new Adapter_daerah(getContext(),lsHomeDaerah);
+        DaerahAdapter myAdapter2=new DaerahAdapter(getContext(),lsHomeDaerah);
         myrv2.setLayoutManager(new GridLayoutManager(getContext(),1));
         myrv2.setAdapter(myAdapter2);
+
+        lsHomeEvent=new ArrayList<>();
+        lsHomeEvent.add(new EventModel("Festival Sandeq Race", R.string.desc_sandeq, R.drawable.sandeq));
+        lsHomeEvent.add(new EventModel("Maulid Nabi Muhammad", R.string.desc_sandeq, R.drawable.polewali));
+        lsHomeEvent.add(new EventModel("Kota Mamuju", R.string.desc_sandeq, R.drawable.mamuju4));
+
+        RecyclerView myrv3=(RecyclerView) view.findViewById(R.id.recyclerHome_Event);
+        EventAdapter myAdapter=new EventAdapter(getContext(),lsHomeEvent);
+        myrv3.setLayoutManager(new GridLayoutManager(getContext(),1));
+        myrv3.setAdapter(myAdapter);
+
+        LinearLayoutManager layoutManager=new LinearLayoutManager(getContext(), LinearLayoutManager.HORIZONTAL, true);
+        myrv3.setLayoutManager(layoutManager);
+
         return view;
     }
 }

@@ -1,12 +1,12 @@
 package com.example.malaqbiapp.model;
 
-public class Daerah_model {
+public class DaerahModel {
     private String Title;
     private int Descripsi;
     private String Kode;
     private int foto;
 
-    public Daerah_model(String title, int descripsi, String Kode, int foto) {
+    public DaerahModel(String title, int descripsi, String Kode, int foto) {
         Title = title;
         Descripsi = descripsi;
         this.Kode = Kode;

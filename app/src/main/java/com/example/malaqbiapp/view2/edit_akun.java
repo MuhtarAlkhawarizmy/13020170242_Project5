@@ -1,9 +1,10 @@
-package com.example.malaqbiapp.behind;
+package com.example.malaqbiapp.view2;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
 
 import android.os.Bundle;
+import android.view.View;
 
 import com.example.malaqbiapp.R;
 
@@ -18,6 +19,12 @@ public class edit_akun extends AppCompatActivity {
         toolbarEditAkun=findViewById(R.id.toolbarEditAkun);
         toolbarEditAkun.setTitle("Edit Akun");
         setSupportActionBar(toolbarEditAkun);
-        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+        toolbarEditAkun.setNavigationIcon(R.drawable.btn_back);
+        toolbarEditAkun.setNavigationOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                finish();
+            }
+        });
     }
 }
