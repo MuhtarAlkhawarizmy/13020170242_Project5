@@ -315,7 +315,7 @@
                 android:text="Daerah-daerah di Sulbar"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginBottom="10dp"/>
+                android:layout_marginBottom="8dp"/>
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
@@ -327,12 +327,9 @@
                 android:orientation="vertical">
                 <androidx.recyclerview.widget.RecyclerView
                     android:id="@+id/recyclerHome_Daerah"
-                    tools:listitem="@layout/cardview_daerah"
+                    tools:listitem="@layout/cardview_menu"
                     android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:layout_marginLeft="10dp"
-                    android:layout_marginRight="10dp">
-
+                    android:layout_height="match_parent">
                 </androidx.recyclerview.widget.RecyclerView>
             </LinearLayout>
         </LinearLayout>

@@ -11,14 +11,14 @@ import android.widget.TextView;
 
 import com.example.malaqbiapp.R;
 
-public class desc_daerah extends AppCompatActivity {
+public class desc_Menu extends AppCompatActivity {
     private Toolbar toolbarDescDaerah;
     private TextView tvTitle, tvDesc, tvKode;
     private ImageView img;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_desc_daerah);
+        setContentView(R.layout.activity_desc_menu);
 
         toolbarDescDaerah=findViewById(R.id.toolbar_DescDaerah);
         toolbarDescDaerah.setTitle("Detail Daerah");

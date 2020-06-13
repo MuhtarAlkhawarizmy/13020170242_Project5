@@ -1,6 +1,7 @@
 package com.example.malaqbiapp.adapter;
 
 import android.content.Context;
+import android.content.Intent;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -13,6 +14,7 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import com.example.malaqbiapp.R;
 import com.example.malaqbiapp.model.MenuModel;
+import com.example.malaqbiapp.view2.desc_Menu;
 
 import java.util.List;
 
@@ -30,15 +32,28 @@ public class MenuAdapter extends RecyclerView.Adapter<MenuAdapter.MyViewHolder> 
     public MyViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
         View view;
         LayoutInflater miInflater=LayoutInflater.from(mContext);
-        view=miInflater.inflate(R.layout.cardview_item_menu, parent, false);
+        view=miInflater.inflate(R.layout.cardview_menu, parent, false);
         return new MyViewHolder(view);
     }
 
     @Override
-    public void onBindViewHolder(@NonNull MyViewHolder holder, int position) {
+    public void onBindViewHolder(@NonNull MyViewHolder holder, final int position) {
         holder.tv_menu_title.setText(mData.get(position).getTitle());
         holder.tv_menu_desc.setText(mData.get(position).getDescripsi());
         holder.img_menu.setImageResource(mData.get(position).getFoto());
+        holder.cardViewMenu.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent goDescMenu=new Intent(mContext, desc_Menu.class);
+
+                goDescMenu.putExtra("Title", mData.get(position).getTitle());
+                goDescMenu.putExtra("Descripsi", mData.get(position).getDescripsi());
+                goDescMenu.putExtra("Kode", mData.get(position).getKode());
+                goDescMenu.putExtra("foto", mData.get(position).getFoto());
+                mContext.startActivity(goDescMenu);
+            }
+        });
+
     }
 
     @Override

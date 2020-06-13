@@ -16,13 +16,16 @@
         android:layout_height="match_parent"
         android:orientation="horizontal">
         <ImageView
+            android:layout_marginTop="8dp"
+            android:layout_marginBottom="8dp"
+            android:layout_marginLeft="8dp"
             android:id="@+id/imgMenu"
-            android:layout_width="140dp"
-            android:layout_height="200dp"
             android:scaleType="centerCrop"
-            android:src="@drawable/suku1" />
+            android:layout_width="100dp"
+            android:layout_height="130dp"
+            android:src="@drawable/polman"/>
         <LinearLayout
-            android:padding="5dp"
+            android:padding="10dp"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:orientation="vertical">
@@ -30,21 +33,21 @@
                 android:id="@+id/tvNamaMenu"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginLeft="5dp"
-                android:layout_marginTop="4dp"
-                android:text="Suku Mandar"
+                android:text="Wonomulyo"
                 android:textSize="18sp"
-                android:textStyle="bold"/>
+                android:textStyle="bold"
+                android:layout_marginTop="4dp"
+                android:layout_marginLeft="8dp"/>
             <TextView
+                android:layout_marginTop="8dp"
                 android:id="@+id/tvDeskMenu"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginLeft="5dp"
-                android:layout_marginTop="5dp"
-                android:layout_marginRight="5dp"
-                android:ellipsize="end"
                 android:text="Deskripsi"
-                android:maxLines="6"/>
+                android:ellipsize="end"
+                android:maxLines="3"
+                android:layout_marginLeft="8dp"/>
         </LinearLayout>
+
     </LinearLayout>
 </androidx.cardview.widget.CardView>

@@ -15,15 +15,14 @@ import android.widget.ImageView;
 import com.example.malaqbiapp.R;
 import com.example.malaqbiapp.adapter.DaerahAdapter;
 import com.example.malaqbiapp.adapter.EventAdapter;
-import com.example.malaqbiapp.model.DaerahModel;
-import com.example.malaqbiapp.model.EventModel;
+import com.example.malaqbiapp.model.MenuModel;
 
 import java.util.ArrayList;
 import java.util.List;
 
 public class Home extends Fragment {
-    List<DaerahModel> lsHomeDaerah;
-    List<EventModel> lsHomeEvent;
+    List<MenuModel> lsHomeDaerah, lsHomeEvent;
+
     ImageView imgTari, imgSuku, imgBhs, imgHand, imgMusic, imgBaju, imgSenjata, imgMakan;
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
@@ -39,12 +38,6 @@ public class Home extends Fragment {
         imgSenjata=view.findViewById(R.id.imgSenjata);
         imgMakan=view.findViewById(R.id.imgMakan);
 
-//        imgTari.setOnClickListener(new View.OnClickListener() {
-//            @Override
-//            public void onClick(View v) {
-//                startActivity(new Intent(getActivity(), SampleActivity.class));
-//            }
-//        });
 //        imgSuku.setOnClickListener(new View.OnClickListener() {
 //            @Override
 //            public void onClick(View v) {
@@ -53,12 +46,12 @@ public class Home extends Fragment {
 //        });
 
         lsHomeDaerah=new ArrayList<>();
-        lsHomeDaerah.add(new DaerahModel("Polewali Mandar", R.string.decs_polman,"Kode Wilayah : 76.04", R.drawable.polman));
-        lsHomeDaerah.add(new DaerahModel("Mamasa", R.string.decs_mamasa,"Kode Wilayah : 76.03", R.drawable.mamasa));
-        lsHomeDaerah.add(new DaerahModel("Majene", R.string.decs_majene, "Kode Wilayah : 76.05", R.drawable.majene));
-        lsHomeDaerah.add(new DaerahModel("Mamuju", R.string.decs_mamuju,"Kode Wilayah : 76.02" , R.drawable.mamuju));
-        lsHomeDaerah.add(new DaerahModel("Mamuju Utara", R.string.decs_mamut,"Kode Wilayah : 76.01" ,R.drawable.mamut));
-        lsHomeDaerah.add(new DaerahModel("Mamuju Tengah", R.string.decs_mateng,"Kode Wilayah : 76.06" ,R.drawable.mateng));
+        lsHomeDaerah.add(new MenuModel("Polewali Mandar", R.string.decs_polman,"Kode Wilayah : 76.04", R.drawable.polman));
+        lsHomeDaerah.add(new MenuModel("Mamasa", R.string.decs_mamasa,"Kode Wilayah : 76.03", R.drawable.mamasa));
+        lsHomeDaerah.add(new MenuModel("Majene", R.string.decs_majene, "Kode Wilayah : 76.05", R.drawable.majene));
+        lsHomeDaerah.add(new MenuModel("Mamuju", R.string.decs_mamuju,"Kode Wilayah : 76.02" , R.drawable.mamuju));
+        lsHomeDaerah.add(new MenuModel("Mamuju Utara", R.string.decs_mamut,"Kode Wilayah : 76.01" ,R.drawable.mamut));
+        lsHomeDaerah.add(new MenuModel("Mamuju Tengah", R.string.decs_mateng,"Kode Wilayah : 76.06" ,R.drawable.mateng));
 
         RecyclerView myrv2=(RecyclerView) view.findViewById(R.id.recyclerHome_Daerah);
         DaerahAdapter myAdapter2=new DaerahAdapter(getContext(),lsHomeDaerah);
@@ -66,9 +59,11 @@ public class Home extends Fragment {
         myrv2.setAdapter(myAdapter2);
 
         lsHomeEvent=new ArrayList<>();
-        lsHomeEvent.add(new EventModel("Festival Sandeq Race", R.string.desc_sandeq, R.drawable.sandeq));
-        lsHomeEvent.add(new EventModel("Maulid Nabi Muhammad", R.string.desc_sandeq, R.drawable.polewali));
-        lsHomeEvent.add(new EventModel("Kota Mamuju", R.string.desc_sandeq, R.drawable.mamuju4));
+        lsHomeEvent.add(new MenuModel("Festival Sandeq Race", R.string.sandeq, "Competisi", R.drawable.sandeq));
+        lsHomeEvent.add(new MenuModel("Maulid Nabi Muhammad", R.string.maulid, "Ibadah", R.drawable.maulid));
+        lsHomeEvent.add(new MenuModel("Sayyang Pattu'du/ Kuda Menari", R.string.sayyang, "Budaya", R.drawable.sayyang));
+        lsHomeEvent.add(new MenuModel("Kalindaqda", R.string.kalindaqda, "Budaya", R.drawable.kalindaqda));
+        lsHomeEvent.add(new MenuModel("Parrebana", R.string.rebana, "Budaya", R.drawable.rebana));
 
         RecyclerView myrv3=(RecyclerView) view.findViewById(R.id.recyclerHome_Event);
         EventAdapter myAdapter=new EventAdapter(getContext(),lsHomeEvent);

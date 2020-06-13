@@ -3,12 +3,22 @@ package com.example.malaqbiapp.model;
 public class MenuModel {
     private String Title;
     private int Descripsi;
+    private String Kode;
     private int foto;
 
-    public MenuModel(String title, int descripsi, int foto) {
+    public MenuModel(String title, int descripsi, String kode, int foto) {
         Title = title;
         Descripsi = descripsi;
+        Kode=kode;
         this.foto = foto;
+    }
+
+    public String getKode() {
+        return Kode;
+    }
+
+    public void setKode(String kode) {
+        Kode = kode;
     }
 
     public void setTitle(String title) {
