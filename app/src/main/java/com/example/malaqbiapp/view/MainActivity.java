@@ -9,6 +9,7 @@ import androidx.viewpager2.widget.ViewPager2;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.Toast;
 
 import com.etebarian.meowbottomnavigation.MeowBottomNavigation;
 import com.example.malaqbiapp.R;
@@ -135,8 +136,9 @@ public class MainActivity extends AppCompatActivity {
         startActivity(i);
     }
     public void ClikMusic(View view){
-        Intent i=new Intent(this, MenuActivity.class);
-        i.putExtra("Menu", "Music");
-        startActivity(i);
+        Toast.makeText(this,"Maaf menu belum tersedia", Toast.LENGTH_SHORT).show();
+//        Intent i=new Intent(this, MenuActivity.class);
+//        i.putExtra("Menu", "Music");
+//        startActivity(i);
     }
 }
