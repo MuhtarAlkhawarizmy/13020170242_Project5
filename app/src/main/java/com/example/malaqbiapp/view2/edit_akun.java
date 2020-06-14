@@ -65,7 +65,6 @@ public class edit_akun extends AppCompatActivity {
         btnSImpan.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-//
                 AkunModel.id_utm=z1.getEditText().getText().toString();
                 AkunModel.nama_utm=z2.getEditText().getText().toString();
                 AkunModel.pass_utm=z3.getEditText().getText().toString();
@@ -74,9 +73,7 @@ public class edit_akun extends AppCompatActivity {
                 AkunModel.note_utm=z6.getEditText().getText().toString();
 
                 Toast.makeText(edit_akun.this, "Profil Berhasil di Update", Toast.LENGTH_SHORT).show();
-                Intent goAkun1=new Intent(edit_akun.this, MainActivity.class);
-                startActivity(goAkun1);
-//                finish();
+                finish();
             }
         });
 

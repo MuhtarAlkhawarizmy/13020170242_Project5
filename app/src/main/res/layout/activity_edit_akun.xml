@@ -44,50 +44,60 @@
                 android:orientation="vertical">
 
                 <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/z1"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="10dp">
                     <EditText
+                        android:id="@+id/tvId"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:hint="User_id" />
                 </com.google.android.material.textfield.TextInputLayout>
 
                 <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/z2"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="10dp">
                     <EditText
+                        android:id="@+id/tvNama"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:hint="Nama lengkap" />
                 </com.google.android.material.textfield.TextInputLayout>
 
                 <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/z3"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="10dp">
                     <EditText
+                        android:id="@+id/tvPass"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:hint="Password" />
                 </com.google.android.material.textfield.TextInputLayout>
 
                 <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/z4"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="10dp">
                     <EditText
+                        android:id="@+id/tvAlamat"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:hint="Alamat" />
                 </com.google.android.material.textfield.TextInputLayout>
 
                 <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/z5"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="10dp">
                     <EditText
+                        android:id="@+id/tvTelp"
                         android:inputType="phone"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
@@ -95,16 +105,19 @@
                 </com.google.android.material.textfield.TextInputLayout>
 
                 <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/z6"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="10dp">
                     <EditText
+                        android:id="@+id/tvNote"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:hint="Info lainnya" />
                 </com.google.android.material.textfield.TextInputLayout>
 
                 <Button
+                    android:id="@+id/btnSimpan"
                     android:background="@drawable/btn_login_style"
                     android:layout_marginLeft="35dp"
                     android:layout_marginRight="35dp"

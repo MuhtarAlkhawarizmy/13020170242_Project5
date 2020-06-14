@@ -35,12 +35,6 @@ public class Akun extends Fragment {
         telp3=view.findViewById(R.id.textTelp3);
         note3=view.findViewById(R.id.textNote3);
 
-        id3.setText(AkunModel.id_utm);
-        nama3.setText(AkunModel.nama_utm);
-        pass3.setText(AkunModel.pass_utm);
-        alamat3.setText(AkunModel.alamat_utm);
-        telp3.setText(AkunModel.telp_utm);
-        note3.setText(AkunModel.note_utm);
 
         toolbarEdit=view.findViewById(R.id.profileToolbar);
         toolbarEdit.setOverflowIcon(getResources().getDrawable(R.drawable.ic_more_vert_white_24dp));
@@ -66,5 +60,21 @@ public class Akun extends Fragment {
         });
 
         return view;
+    }
+
+    @Override
+    public void onResume() {
+        super.onResume();
+        setDataAkun();
+    }
+
+    public void setDataAkun(){
+        id3.setText(AkunModel.id_utm);
+        nama3.setText(AkunModel.nama_utm);
+        pass3.setText(AkunModel.pass_utm);
+        alamat3.setText(AkunModel.alamat_utm);
+        telp3.setText(AkunModel.telp_utm);
+        note3.setText(AkunModel.note_utm);
+
     }
 }
