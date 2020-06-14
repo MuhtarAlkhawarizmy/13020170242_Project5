@@ -134,4 +134,9 @@ public class MainActivity extends AppCompatActivity {
         i.putExtra("Menu", "Tari");
         startActivity(i);
     }
+    public void ClikMusic(View view){
+        Intent i=new Intent(this, MenuActivity.class);
+        i.putExtra("Menu", "Music");
+        startActivity(i);
+    }
 }

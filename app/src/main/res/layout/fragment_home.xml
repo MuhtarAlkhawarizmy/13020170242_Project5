@@ -184,6 +184,7 @@
                     android:layout_weight="1"
                     android:gravity="center">
                     <ImageView
+                        android:onClick="ClikMusic"
                         android:id="@+id/imgLagu"
                         android:src="@drawable/img_music"
                         android:layout_width="match_parent"

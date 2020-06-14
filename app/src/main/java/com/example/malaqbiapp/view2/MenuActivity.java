@@ -12,6 +12,7 @@ import android.view.View;
 import com.example.malaqbiapp.R;
 import com.example.malaqbiapp.adapter.MenuAdapter;
 import com.example.malaqbiapp.model.MenuModel;
+import com.example.malaqbiapp.model.MusicModel;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -19,6 +20,7 @@ import java.util.List;
 public class MenuActivity extends AppCompatActivity {
     private Toolbar toolbarMenu;
     List<MenuModel> lsMenu;
+    List<MusicModel> lsMusic;
     Intent i;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -151,6 +153,19 @@ public class MenuActivity extends AppCompatActivity {
                 myrvKue.setLayoutManager(new GridLayoutManager(this, 1));
                 myrvKue.setAdapter(myAdapterKue);
             break;
+
+            case "Music":
+                getSupportActionBar().setTitle("Lagu Daerah Sulbar");
+                lsMusic=new ArrayList<>();
+                lsMusic.add(new MusicModel("Beru-beru", R.string.kue1, "R.raw.tallu", R.drawable.img_play));
+                lsMusic.add(new MusicModel("Tenggang-tenggan lopi", R.string.kue2, "R.raw.tallu", R.drawable.img_play));
+                lsMusic.add(new MusicModel("Indonesia", R.string.kue3, "R.raw.tallu", R.drawable.img_play));
+
+                RecyclerView myrvMusic=(RecyclerView) findViewById(R.id.recyclerMenu);
+                MenuAdapter myAdapterMusic=new MenuAdapter(this, lsMenu);
+                myrvMusic.setLayoutManager(new GridLayoutManager(this, 1));
+                myrvMusic.setAdapter(myAdapterMusic);
+                break;
         }
     }
 }

@@ -11,6 +11,7 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import com.example.malaqbiapp.R;
+import com.example.malaqbiapp.model.AkunModel;
 import com.google.android.material.textfield.TextInputLayout;
 
 public class daftar extends AppCompatActivity {
@@ -18,10 +19,13 @@ public class daftar extends AppCompatActivity {
     private TextInputLayout txt_id1, txt_nama1, txtpass1;
     private TextView txt_login1;
     private EditText e1, e2, e3;
+    String id, nama,pass;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_daftar);
+
+        AkunModel akun1;
 
         btn_daftar1=findViewById(R.id.btnDaftar1);
         txt_login1=findViewById(R.id.textMasuk1);
@@ -34,6 +38,7 @@ public class daftar extends AppCompatActivity {
         e1=findViewById(R.id.c1);
         e2=findViewById(R.id.c2);
         e3=findViewById(R.id.c3);
+
 
         txt_login1.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -50,8 +55,14 @@ public class daftar extends AppCompatActivity {
                     Toast.makeText(daftar.this, "semua form Wajib diisi !", Toast.LENGTH_SHORT).show();
                 }
                 else {
-                    Toast.makeText(daftar.this, "Akun Anda berhasil dibuat, silahkan kemenu Login untuk Masuk", Toast.LENGTH_SHORT).show();
+                    AkunModel.id_utm=txt_id1.getEditText().getText().toString();
+                    AkunModel.nama_utm=txt_nama1.getEditText().getText().toString();
+                    AkunModel.pass_utm=txtpass1.getEditText().getText().toString();
+
+                    Toast.makeText(daftar.this, "Akun : "+AkunModel.id_utm+" : berhasil dibuat, silahkan Login untuk Masuk", Toast.LENGTH_SHORT).show();
                     bersih();
+                    Intent goLogin=new Intent(daftar.this, login.class);
+                    startActivity(goLogin);
                 }
             }
         });
